@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+.pc {
+  display: none;
+}
+
 body {
   margin: 0;
   margin-top: var(--header-height);
@@ -206,4 +210,71 @@ img.top-banner {
 
 .hidden {
   display: none;
+}
+
+
+
+
+@media (min-width: 999px) {
+  .mobile {
+    display: none !important;
+  }
+
+  .pc {
+    display: unset;
+  }
+
+  body {
+    margin-top: 0;
+  }
+
+  header {
+    position: relative;
+    padding: 1.2rem 0rem 1.2rem 2rem;
+  }
+
+  header nav {
+    background-position: left;
+    padding: 0.8rem 0rem 0.8rem 2rem;
+
+  }
+
+  header .pc ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+  }
+
+  header .pc ul li {
+    --local-color: black;
+    --local-transition-time: 0.25s;
+    width: max-content;
+    transition: background-color var(--local-transition-time), color var(--local-transition-time);
+    cursor: pointer;
+  }
+
+  header .pc ul li:hover {
+    background-color: var(--color-p-1);
+    --local-color: white;
+  }
+
+  header .pc ul li a {
+    display: block;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    color: var(--local-color);
+    transition: color var(--local-transition-time);
+  }
+
+  .section-one h1 {
+    font-size: 3rem;
+    margin-top: unset;
+  }
+
 }
