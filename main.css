@@ -1,0 +1,112 @@
+:root {
+  --color-p-1: #550000;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+header .info {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.1rem 0.8rem;
+  background-color: var(--color-p-1);
+  color: white;
+  font-family: 'Open Sans',Arial,Helvetica,sans-serif;
+}
+
+header .info a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url("./imgs/monroe-logo-hires.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+header label[for="menu"] {
+  display: grid;
+  place-items: center;
+  height: 35px;
+  aspect-ratio: 1;
+  margin: 0.3rem;
+  float: right;
+}
+
+header label[for="menu"] > .stick,
+header label[for="menu"] > .stick::after,
+header label[for="menu"] > .stick::before {
+  --distance: -11.5px;
+  width: 100%;
+  height: 0.3rem;
+  background: var(--color-p-1);
+  border-radius: 0.1rem;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+header label[for="menu"] > .stick {
+  position: relative;
+}
+
+header label[for="menu"] > .stick::after,
+header label[for="menu"] > .stick::before {
+  content: "";
+  position: absolute;
+}
+
+header nav label[for="menu"] > .stick::after {
+  transform-origin: left;
+  top: var(--distance);
+}
+
+header nav label[for="menu"] > .stick::before {
+  transform-origin: left;
+  bottom: var(--distance);
+}
+
+#menu:checked ~ nav label[for="menu"] {
+  /* background: red; */
+}
+#menu:checked ~ nav label[for="menu"] > .stick::after {
+  transform: translate(0.3rem, 0) rotate(45deg);
+}
+#menu:checked ~ nav label[for="menu"] > .stick::before {
+  transform: translate(0.3rem, 0) rotate(-45deg);
+}
+#menu:checked ~ nav label[for="menu"] > .stick {
+  background-color: transparent;
+}
+
+img.top-banner {
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
+
+
+.bold {
+  font-weight: bold;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.hidden {
+  display: none;
+}
