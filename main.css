@@ -1,5 +1,6 @@
 :root {
   --color-p-1: #550000;
+  --header-height: 80px;
 }
 
 *, *::before, *::after {
@@ -8,6 +9,12 @@
 
 body {
   margin: 0;
+  margin-top: var(--header-height);
+}
+
+header {
+  position: fixed;
+  inset: 0 0 auto 0;
 }
 
 header .info {
@@ -32,6 +39,7 @@ header nav {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  margin: 0.5rem 0;
 }
 
 header label[for="menu"] {
@@ -41,6 +49,7 @@ header label[for="menu"] {
   aspect-ratio: 1;
   margin: 0.3rem;
   float: right;
+  cursor: pointer;
 }
 
 header label[for="menu"] > .stick,
@@ -74,9 +83,6 @@ header nav label[for="menu"] > .stick::before {
   bottom: var(--distance);
 }
 
-#menu:checked ~ nav label[for="menu"] {
-  /* background: red; */
-}
 #menu:checked ~ nav label[for="menu"] > .stick::after {
   transform: translate(0.3rem, 0) rotate(45deg);
 }
@@ -87,10 +93,101 @@ header nav label[for="menu"] > .stick::before {
   background-color: transparent;
 }
 
+.drop-down-menu {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  background-color: white;
+}
+
+.drop-down-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  box-shadow: 0px 1px 1px 0px #98abc5;
+}
+
+.drop-down-menu ul li {
+  background-color: hsl(0, 0%, 88%);
+}
+
+.drop-down-menu ul a {
+  display: block;
+  padding: 0.8rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+.drop-down-menu .contact {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.drop-down-menu .contact p {
+  font-family: sans-serif;
+  margin: 0;
+  line-height: 1.5rem;
+}
+
+.drop-down-menu .contact h3 {
+  margin: 1rem 0 0.3rem 0;
+}
+
+.drop-down-menu {
+  transform: scale(1, 0);
+  transform-origin: top;
+  color: transparent;
+  transition: transform 0.5s 0.1s, color 0.5s;
+}
+
+#menu:checked ~ nav .drop-down-menu {
+
+  transition: transform 0.5s, color 0.5s;
+  transform: scale(1, 1);
+  color: unset;
+}
+
+nav .drop-down-menu ul li a {
+  color: transparent;
+  transition: color 0.5s;
+}
+
+#menu:checked ~ nav .drop-down-menu ul li a {
+  color: black;
+}
+
+
+section {
+  padding: 15px;
+}
+
 img.top-banner {
   width: 100%;
   height: auto;
 }
+
+.section-one h1 {
+  font-family: serif;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #343e57;
+  margin-top: 0;
+}
+
+.section-one p {
+  font-family: sans-serif;
+  line-height: 1.4rem;
+}
+
+.section-one a {
+  text-decoration: none;
+  color: var(--color-p-1);
+}
+
 
 
 
