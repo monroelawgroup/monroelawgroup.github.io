@@ -1,6 +1,7 @@
 :root {
   --color-p-1: #550000;
   --header-height: 80px;
+  --max-width: 1200px;
 }
 
 *, *::before, *::after {
@@ -19,6 +20,9 @@ body {
 header {
   position: fixed;
   inset: 0 0 auto 0;
+  max-width: var(--max-width);
+  margin: auto;
+  background-color: white;
 }
 
 header .info {
@@ -166,7 +170,10 @@ nav .drop-down-menu ul li a {
 
 
 section {
-  padding: 15px;
+  --padding: 15px;
+  padding: var(--padding);
+  max-width: var(--max-width);
+  margin: auto;
 }
 
 img.top-banner {
@@ -190,6 +197,19 @@ img.top-banner {
 .section-one a {
   text-decoration: none;
   color: var(--color-p-1);
+}
+
+.section-two h1 {
+  margin-left: calc(-1 * var(--padding));
+  margin-right: calc(-1 * var(--padding));
+  padding: 1rem 4rem;
+  background-color: var(--color-p-1);
+  color: white;
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-align: center;
+  /* line-height:  */
 }
 
 
