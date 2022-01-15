@@ -381,8 +381,9 @@ footer .copyright a {
   }
 
   .box-one, .box-two {
-    background-color: #0002;
-    box-shadow: 0 0 3px 2px #0005 !important;
+    --bg-color: #0002;
+    background-color: var(--bg-color);
+    box-shadow: 0 0 7px 0 #0006 !important;
     border-radius: 2px;
   }
 
@@ -395,7 +396,7 @@ footer .copyright a {
   .box-one h1 {
     margin: inherit;
     color: var(--color-p-1);
-    background-color: #0001;
+    background-color: var(--bg-color);
     text-align: left;
     display: flex;
     align-items: center;
