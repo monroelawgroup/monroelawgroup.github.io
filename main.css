@@ -1,5 +1,8 @@
 :root {
   --color-p-1: #550000;
+  --color-p-2: #3b5076;
+  --color-s-1: #cf4040;
+  --color-s-1-light: #e97979;
   --header-height: 80px;
   --max-width: 1200px;
 }
@@ -199,21 +202,89 @@ img.top-banner {
   color: var(--color-p-1);
 }
 
+.section-two {
+  background-color: #0002;
+  padding-top: 0;
+  margin-top: 0;
+  font-family: sans-serif;
+}
+
 .section-two h1 {
   margin-left: calc(-1 * var(--padding));
   margin-right: calc(-1 * var(--padding));
+  margin-bottom: 1rem;
   padding: 1rem 4rem;
   background-color: var(--color-p-1);
   color: white;
-  font-family: "Open Sans";
   font-weight: bold;
   font-size: 2.5rem;
   text-align: center;
-  /* line-height:  */
 }
 
+.section-two p {
+  padding: 0;
+  text-align: center;
+  font-weight: 300;
+  color: #0009;
+  line-height: 1.5rem;
+  font-family: "Open Sans";
+}
 
+.section-two .box-two {
+  box-shadow: 0 -6px 6px -6px var(--color-p-2);
+  margin-bottom: 1rem;
+}
 
+.section-two .box-two h3 {
+  font-family: serif;
+  font-size: 1.7rem;
+  color: var(--color-p-1);
+  text-align: center;
+  margin: 0;
+  padding: 0.7rem;
+}
+
+.section-two .box-two p {
+  color: black;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  margin: 0 2rem 1rem 2rem;
+}
+
+.section-two .box-two a {
+  display: block;
+  width: max-content;
+  background-color: var(--color-s-1);
+  padding: 0.8rem 1.3rem;
+  margin: auto;
+  border: 0.2rem solid var(--color-s-1-light);
+  text-decoration: none;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+footer .info {
+  min-height: 80px;
+  border: .7rem solid transparent;
+  background-image: url("./imgs/monroe-logo-footer.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--color-p-1);
+}
+
+footer .copyright {
+  padding: 1rem;
+  background-color: var(--color-p-2);
+  color: #FFF9;
+  text-align: center;
+}
+
+footer .copyright a {
+  text-decoration: none;
+  color: inherit;
+}
 
 
 
@@ -228,9 +299,14 @@ img.top-banner {
   text-transform: uppercase;
 }
 
+.capitalize {
+  text-transform: capitalize;
+}
+
 .hidden {
   display: none;
 }
+
 
 
 
