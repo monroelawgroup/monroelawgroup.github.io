@@ -257,6 +257,7 @@ img.top-banner {
   background-color: var(--color-s-1);
   padding: 0.8rem 1.3rem;
   margin: auto;
+  margin-top: 1rem;
   border: 0.2rem solid var(--color-s-1-light);
   text-decoration: none;
   color: white;
@@ -371,6 +372,54 @@ footer .copyright a {
   .section-one h1 {
     font-size: 3rem;
     margin-top: unset;
+  }
+
+  .section-two {
+    display: flex;
+    gap: 1rem;
+    background-color: white;
+  }
+
+  .box-one, .box-two {
+    background-color: #0002;
+    box-shadow: 0 0 3px 2px #0005 !important;
+    border-radius: 2px;
+  }
+
+  .box-one {
+    display: flex;
+    flex: 70;
+    background-color: white;
+  }
+
+  .box-one h1 {
+    margin: inherit;
+    color: var(--color-p-1);
+    background-color: #0001;
+    text-align: left;
+    display: flex;
+    align-items: center;
+  }
+
+  .box-one p {
+    padding: 1rem;
+    margin: 0;
+    text-align: left;
+    font-size: 1.6rem;
+    font-weight: 100;
+    line-height: 3rem;
+  }
+
+  .box-two {
+    flex: 30;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .box-two h3 {
+    box-shadow: unset;
   }
 
 }
