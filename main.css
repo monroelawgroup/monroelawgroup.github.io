@@ -282,6 +282,11 @@ footer .copyright {
   text-align: center;
 }
 
+footer .copyright h3,
+footer .copyright p {
+  margin: 0.5rem 0;
+}
+
 footer .copyright a {
   text-decoration: none;
   color: inherit;
@@ -421,6 +426,12 @@ footer .copyright a {
 
   .box-two h3 {
     box-shadow: unset;
+  }
+
+  .copyright {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
 
 }
