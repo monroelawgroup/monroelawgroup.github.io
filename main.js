@@ -15,7 +15,7 @@ window.addEventListener("load", async function main() {
   brokenElements.forEach(el => {
     el.addEventListener("click", e => {
       e.preventDefault();
-      alert("This link is down for matinence");
+      alert("This link is down for maintenance");
     });
   });
 });
